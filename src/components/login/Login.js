@@ -29,22 +29,26 @@ export const Login = () => {
           // Aquí puedes enviar los datos de inicio de sesión al servidor
         }
     };
-
+    
     return (
         <Container maxWidth='xl'>
             <Grid
-                container direction={'row'} 
+                container spacing ={2} 
+                direction={'column'} 
                 alignItems={'center'} 
-                justifyContent={'center'}
+                justifyContent={'space-evenly'}
                 sx={{minHeight:'100vh'}}
             >
-                <Grid 
-                    item xs={6}
-                    
+                <Grid
+                    item xs={5}
+                    container spacing={2}
+                    direction={'column'}
+                    alignItems={'center'}
+                    justifyContent={'center'}                                      
                 >
-                        <img src={logoUdeA} height={'100%'} width={'100%'}/>
+                    <img src={logoUdeA} height={'100%'} width={'40%'}/>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={5}>
                     <Paper sx={{padding:'1.2em', borderRadius:'0.5em'}}>
                         <Typography 
                             variant='h6'
