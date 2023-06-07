@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Box, Button,Container, Grid, Paper, TextField, Typography } from '@mui/material'
+import logoUdeA from '../../assets/logos/logosimbolo-horizontal-png.png';
 
 export const Login = () => {
     const [email, setEmail] = useState('');
@@ -30,17 +31,23 @@ export const Login = () => {
     };
 
     return (
-        <Container maxWidth='sm'>
+        <Container maxWidth='xl'>
             <Grid
-                container direction={'colum'} 
+                container direction={'row'} 
                 alignItems={'center'} 
                 justifyContent={'center'}
                 sx={{minHeight:'100vh'}}
             >
-                <Grid item xs={8}>
+                <Grid 
+                    item xs={6}
+                    
+                >
+                        <img src={logoUdeA} height={'100%'} width={'100%'}/>
+                </Grid>
+                <Grid item xs={6}>
                     <Paper sx={{padding:'1.2em', borderRadius:'0.5em'}}>
                         <Typography 
-                            variant='h4'
+                            variant='h6'
                             sx={{mt:1,mb:1}}
                         >
                             Iniciar Sesión
@@ -55,6 +62,7 @@ export const Login = () => {
                                 margin='normal'
                                 type='text'
                                 onChange={handleEmailChange}
+                                
                             />
                             <TextField 
                                 name='password'
