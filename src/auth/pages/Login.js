@@ -22,11 +22,11 @@ export const Login = () => {
     },
     validationSchema: Yup.object({
       email: Yup.string()
-        .email("common.validations.email")
-        .required("common.validations.required"),
+        .email("Correo no válido")
+        .required("Debe ingresar un correo"),
       password: Yup.string()
-        .min(8, ("common.validations.min", { size: 8 }))
-        .required("common.validations.required"),
+        .min(8, ("La contraseña debe poseer minimo 8 caracteres"))
+        .required("Ingrese una contraseña"),
     }),
     onSubmit: (values) => handleLogin(values.email, values.password),
   });
@@ -91,6 +91,7 @@ export const Login = () => {
               fullWidth
               /* loading={isLoggingIn} */
               variant="contained"
+              size="large"
               sx={{ mt: 3 }}
             >
               Ingresar
