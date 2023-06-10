@@ -1,8 +1,8 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
-import logoUdeA from "../assets/logos/UdeA+simplificado+®-02.png";
 
-export const LayoutBox = () => {
+
+export const LayoutBox = ({imagen,width,alt}) => {
   return (
     <Box
       
@@ -12,10 +12,10 @@ export const LayoutBox = () => {
         alignItems: "center",
       }}
     >
-      <img src={logoUdeA} width={"50%"} height={"auto"} />
-      <Typography component={"h1"} variant="h5">
+      <img src={imagen} width={width} height={"auto"} alt={alt} />
+      {/* <Typography component={"h1"} variant="h5">
         Ingresar
-      </Typography>
+      </Typography> */}
     </Box>
   );
 };
