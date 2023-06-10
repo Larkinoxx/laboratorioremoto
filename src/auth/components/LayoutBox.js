@@ -13,9 +13,6 @@ export const LayoutBox = ({imagen,width,alt}) => {
       }}
     >
       <img src={imagen} width={width} height={"auto"} alt={alt} />
-      {/* <Typography component={"h1"} variant="h5">
-        Ingresar
-      </Typography> */}
     </Box>
   );
 };
