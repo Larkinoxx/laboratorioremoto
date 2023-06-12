@@ -14,6 +14,7 @@ const estudianteSchema = new Schema({
     numeroDocumento: {
         type: String,
         required: true,
+        unique: true,
     },
     correoElectronico:{
         type: String,
@@ -23,6 +24,7 @@ const estudianteSchema = new Schema({
     codigoEstudiante: {
         type: String,
         required: true,
+        unique:true,
     },
     clave:{
         type: String,
@@ -32,6 +34,6 @@ const estudianteSchema = new Schema({
         type: Boolean
     }
 
-});
+}/* , {timestamps:true} */);
 
 export const Estudiante = model('Estudiante',estudianteSchema);

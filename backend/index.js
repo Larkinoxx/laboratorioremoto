@@ -3,11 +3,16 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
+import estudianteRoutes from './routes/estudiante.js';
 
 dotenv.config();
 const app = express();
 app.use(morgan("dev"));
 app.use(cors());
+app.use(express.json());
+
+
+app.use(estudianteRoutes);
 
 /**mongoose setup */
 
