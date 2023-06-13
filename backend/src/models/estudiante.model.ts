@@ -1,39 +1,41 @@
-import { Schema,model} from 'mongoose';
+
+import { Schema, model, Document} from 'mongoose';
 
 
 const estudianteSchema = new Schema({
 
     nombreCompleto: {
         type: String,
-        required: true,
     },
     tipoDocumento:{
         type: String,
-        required: true,
     },
     numeroDocumento: {
         type: String,
-        required: true,
-        unique: true,
     },
     correoElectronico:{
         type: String,
-        required: true,
-        unique:true,
     },
     codigoEstudiante: {
         type: String,
-        required: true,
-        unique:true,
     },
     clave:{
         type: String,
-        required: true,
     },
     activo: {
         type: Boolean
     }
 
-}/* , {timestamps:true} */);
+});
 
-export const Estudiante = model('Estudiante',estudianteSchema);
+interface IEstudiante extends Document {
+    nombre: string;
+    tipoDocumento: string;
+    numeroDocumento: string;
+    correoElectronico: string;
+    codigoEstudiante: string;
+    clave: string;
+    activo: Boolean;
+}
+
+export const Estudiante = model<IEstudiante>('Estudiante',estudianteSchema, 'estudiantes');

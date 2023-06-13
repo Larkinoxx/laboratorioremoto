@@ -1,6 +1,15 @@
 export default class EstudianteRegistroDto {
 
-    constructor(data){
+    private _id?: string;
+    private nombreCompleto: string;
+    private tipoDocumento: string;
+    private numeroDocumento: string;
+    private correoElectronico: string;
+    private codigoEstudiante: string;
+    private clave: string;
+    private activo: boolean;
+
+    constructor(data?: any){
         if (!data) {
             this.nombreCompleto = "";
             this.tipoDocumento = "";
