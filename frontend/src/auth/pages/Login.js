@@ -11,7 +11,7 @@ import React from "react";
 import * as Yup from "yup";
 import logoLogin from "../../assets/logos/logosimbolo-vertical-negro-png.png";
 import logoUdeA from "../../assets/logos/UdeA+simplificado+®-02.png";
-import { LayoutBox } from "../components/LayoutBox";
+import { LayoutBox } from "../../components/LayoutBox";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
